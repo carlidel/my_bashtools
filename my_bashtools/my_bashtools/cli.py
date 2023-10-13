@@ -16,6 +16,9 @@ def generate_parser():
     # Subcommand: sshfs (mount)
     subparsers.add_parser("sshfs", help="Mount AFS and EOS folders via SSHFS")
 
+    # Subcommand: update
+    subparsers.add_parser("update", help="Update the repository")
+
     return parser
 
 
@@ -58,6 +61,21 @@ def main():
                 "~/eos",
             ],
             check=True,
+        )
+
+    elif args.subcommand == "update":
+        # get the path of this file
+        this_file_path = os.path.abspath(__file__)
+
+        # update the repository
+        print("Updating the repository...")
+        subprocess.run(
+            [
+                "git",
+                "pull",
+            ],
+            check=True,
+            cwd=os.path.dirname(this_file_path),
         )
 
 
