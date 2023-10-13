@@ -44,11 +44,11 @@ if lspci | grep -i "NVIDIA Corporation" &> /dev/null; then
     # If NVIDIA GPU is present, load the CUDA-flavored CVMFS release
     if [[ -f /etc/os-release ]]; then
         source /etc/os-release
-        if [[ "$ID" == "centos" && "$VERSION_ID" =~ ^7 ]]; then
+        if [[ "$VERSION_ID" =~ ^7 ]]; then
             load_centos7_cuda_release
-        elif [[ "$ID" == "centos" && "$VERSION_ID" =~ ^8 ]]; then
+        elif [[ "$VERSION_ID" =~ ^8 ]]; then
             load_centos8_cuda_release
-        elif [[ "$ID" == "almalinux" && "$VERSION_ID" =~ ^9 ]]; then
+        elif [[ "$VERSION_ID" =~ ^9 ]]; then
             load_alma_linux9_cuda_release
         else
             echo "Unsupported OS: $ID $VERSION_ID"
