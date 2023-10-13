@@ -13,5 +13,5 @@ setup(
     description="A collection of useful bash tools",
     license="MIT",
     keywords="bash tools",
-    url="https://github.com/camontan/my_bashtools",
+    url="https://github.com/carlidel/my_bashtools",
 )
