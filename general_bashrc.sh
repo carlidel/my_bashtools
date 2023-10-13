@@ -217,3 +217,4 @@ alias afshome='cd /afs/cern.ch/work/c/camontan/public'
 
 export EOSHOME="/eos/user/c/camontan"
 export AFSHOME="/afs/cern.ch/work/c/camontan/public"
+export CNAFHOME="/home/HPC/camontan"
