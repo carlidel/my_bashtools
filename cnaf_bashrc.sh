@@ -1,4 +1,3 @@
 #!/bin/bash
-
-# Load my personal Python
-source /home/HPC/camontan/anaconda3/bin/activate
+# Enable DevToolset-10 environment
+source /opt/rh/devtoolset-10/enable
