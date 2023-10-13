@@ -2,8 +2,8 @@ export EDITOR=code
 
 ### PROMPT SETUP ###
 
-SBP_PATH=/home/camontan/Things/sbp
-source /home/camontan/Things/sbp/sbp.bash
+SBP_PATH=/home/camontan/my_bashtools/sbp
+source /home/camontan/my_bashtools/sbp/sbp.bash
 sbp set layout powerline
 sbp set color default
 

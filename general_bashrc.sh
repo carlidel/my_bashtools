@@ -209,3 +209,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# UNIVERSAL ALIASES
+alias kinit="kinit -f camontan@CERN.CH"

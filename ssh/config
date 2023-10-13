@@ -1,4 +1,4 @@
-Host    lxplus
+Host    lxplus*
     ForwardX11 yes
     ForwardX11Trusted yes
     GSSAPITrustDNS yes
