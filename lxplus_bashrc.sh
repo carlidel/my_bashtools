@@ -84,3 +84,6 @@ source /afs/cern.ch/work/c/camontan/public/venv/bin/activate
 
 # Set home directory alias
 alias home='cd /afs/cern.ch/work/c/camontan/public'
+export PATH="$PATH:/afs/cern.ch/user/m/mad/bin"
+
+cd /afs/cern.ch/work/c/camontan/public
