@@ -1,0 +1,41 @@
+Host    lxplus
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    GSSAPITrustDNS yes
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    HostName        lxplus.cern.ch
+
+Host    work
+    IdentityFile /home/camontan/.ssh/id_work_office
+    ForwardX11 yes
+    ForwardX11Trusted no
+    ProxyCommand ssh -q lxplus nc PCBE16926 22
+
+Host    workVNC
+    IdentityFile /home/camontan/.ssh/id_work_office
+    ForwardX11 yes
+    ForwardX11Trusted no
+    ProxyCommand ssh -q lxplus nc PCBE16926 22
+    LocalForward    5900    localhost:5900
+
+Host    bastion
+    User  camontan
+    Hostname bastion.cnaf.infn.it
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host    bastionfrontend
+    User  camontan
+    Hostname ui-hpc2.cr.cnaf.infn.it
+    ProxyJump bastion
+    ForwardX11 yes
+    ForwardAgent yes
+
+Host    abp
+    User  camontan
+    Hostname hpc-201-11-35
+    ProxyJump bastion
+    ForwardX11 yes
+    ForwardAgent yes
