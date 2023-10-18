@@ -14,4 +14,5 @@ setup(
     license="MIT",
     keywords="bash tools",
     url="https://github.com/carlidel/my_bashtools",
+    include_package_data=True,
 )
