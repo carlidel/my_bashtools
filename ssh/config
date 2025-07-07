@@ -39,3 +39,21 @@ Host    abp
     ProxyJump bastion
     ForwardX11 yes
     ForwardAgent yes
+
+Host boincdev
+    HostName boinc05.cern.ch
+    User sixtadm
+    GSSAPITrustDNS yes
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+
+
+Host boincdev-fromhome
+    HostName boinc05.cern.ch
+    User sixtadm
+    ProxyJump camontan@lxplus.cern.ch
+    GSSAPITrustDNS yes
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
