@@ -35,10 +35,16 @@ Host    bastionfrontend
 
 Host    abp
     User  camontan
-    Hostname hpc-201-11-35
+    Hostname hpc-s04-14-28
     ProxyJump bastion
     ForwardX11 yes
     ForwardAgent yes
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+
 
 Host boincdev
     HostName boinc05.cern.ch
