@@ -49,10 +49,17 @@ Host github.com
 Host boincdev
     HostName boinc05.cern.ch
     User sixtadm
-    GSSAPITrustDNS yes
-    HashKnownHosts yes
-    GSSAPIAuthentication yes
-    GSSAPIDelegateCredentials yes
+    ForwardX11 yes
+    ForwardAgent yes
+    SetEnv VSCODE_SERVER_DIR=/home/xtrack/.vscode-server
+
+
+Host boincprod
+    HostName boinc01.cern.ch
+    User sixtadm
+    ForwardX11 yes
+    ForwardAgent yes
+    SetEnv VSCODE_SERVER_DIR=/home/xtrack/.vscode-server
 
 
 Host boincdev-fromhome
@@ -63,3 +70,4 @@ Host boincdev-fromhome
     HashKnownHosts yes
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
+    SetEnv VSCODE_SERVER_DIR=/home/xtrack/.vscode-server
